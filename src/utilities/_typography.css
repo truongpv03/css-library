@@ -1,0 +1,18 @@
+/* Font sizes */
+.fs-sm { font-size: 0.875rem; }
+.fs-base { font-size: 1rem; }
+.fs-lg { font-size: 1.25rem; }
+.fs-xl { font-size: 1.5rem; }
+
+/* Text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Font weight */
+.fw-normal { font-weight: 400; }
+.fw-bold { font-weight: 700; }
+
+/* Line height */
+.lh-1 { line-height: 1; }
+.lh-normal { line-height: 1.5; } 

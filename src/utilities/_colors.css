@@ -1,0 +1,15 @@
+/* Text colors */
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-success { color: var(--success); }
+.text-danger { color: var(--danger); }
+.text-dark { color: var(--dark); }
+.text-light { color: var(--light); }
+
+/* Background colors */
+.bg-success { background-color: var(--success); }
+.bg-danger { background-color: var(--danger); }
+.bg-warning { background-color: var(--warning); }
+.bg-info { background-color: var(--info); }
+.bg-light { background-color: var(--light); }
+.bg-dark { background-color: var(--dark); } 

@@ -1,0 +1,15 @@
+/* Padding */
+.p-0 { padding: 0; }
+.p-1 { padding: calc(var(--spacing-unit) * 0.25); }
+.p-2 { padding: calc(var(--spacing-unit) * 0.5); }
+.p-3 { padding: var(--spacing-unit); }
+.p-4 { padding: calc(var(--spacing-unit) * 1.5); }
+.p-5 { padding: calc(var(--spacing-unit) * 3); }
+
+/* Margin */
+.m-0 { margin: 0; }
+.m-1 { margin: calc(var(--spacing-unit) * 0.25); }
+.m-2 { margin: calc(var(--spacing-unit) * 0.5); }
+.m-3 { margin: var(--spacing-unit); }
+.m-4 { margin: calc(var(--spacing-unit) * 1.5); }
+.m-5 { margin: calc(var(--spacing-unit) * 3); } 
