@@ -25,6 +25,9 @@ jobs:
       - name: 🚀 Build CSS với Webpack
         run: npm run build
 
+      - name: 📦 Kiểm tra file build
+        run: ls -lah dist
+
       - name: 📦 Lưu file build
         uses: actions/upload-artifact@v4
         with:
@@ -44,6 +47,9 @@ jobs:
         with:
           name: css-library
           path: dist/
+
+      - name: 🚀 Kiểm tra file trước khi release
+        run: ls -lah dist
 
       - name: 🚀 Tạo GitHub Release
         uses: softprops/action-gh-release@v1
