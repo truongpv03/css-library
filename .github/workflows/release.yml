@@ -11,24 +11,23 @@ jobs:
 
     steps:
       - name: 📥 Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 🔧 Thiết lập Node.js
-        uses: actions/setup-node@v18
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: 📦 Cài đặt dependencies
-        run: |
-          npm install clean-css-cli -g
+      - name: 📦 Cài đặt CleanCSS
+        run: npm install clean-css-cli -g
 
       - name: 🚀 Build CSS
         run: |
           mkdir -p dist
           cleancss -o dist/css-library.min.css src/main.css
 
-      - name: 📦 Upload file build
-        uses: actions/upload-artifact@v3
+      - name: 📦 Lưu file build
+        uses: actions/upload-artifact@v4
         with:
           name: css-library
           path: dist/css-library.min.css
@@ -39,10 +38,10 @@ jobs:
 
     steps:
       - name: 📥 Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 📥 Tải file đã build
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: css-library
           path: dist/
