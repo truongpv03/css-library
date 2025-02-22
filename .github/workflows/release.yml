@@ -46,8 +46,16 @@ jobs:
           path: dist/
 
       - name: 🚀 Tạo GitHub Release
+        id: create_release
         uses: softprops/action-gh-release@v1
         with:
           files: dist/css-library.min.css
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🏗️ Lấy phiên bản release
+        id: get_version
+        run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
+      - name: 🔗 In ra link CDN jsDelivr
+        run: echo "✅ CDN: https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ env.TAG_NAME }}/dist/css-library.min.css"
