@@ -3,7 +3,7 @@ name: Build & Release CSS Library
 on:
   push:
     tags:
-      - "v*" # Chạy khi có tag mới dạng v1.0, v2.0, vX.Y
+      - "v*" # Chạy khi có tag mới (v1.0, v2.0, vX.Y)
 
 jobs:
   build:
@@ -17,14 +17,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "npm"
 
-      - name: 📦 Cài đặt CleanCSS
-        run: npm install clean-css-cli -g
+      - name: 📦 Cài đặt dependencies
+        run: npm install
 
-      - name: 🚀 Build CSS
-        run: |
-          mkdir -p dist
-          cleancss -o dist/css-library.min.css src/main.css
+      - name: 🚀 Build CSS với Webpack
+        run: npm run build
 
       - name: 📦 Lưu file build
         uses: actions/upload-artifact@v4
